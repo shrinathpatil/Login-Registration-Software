@@ -108,6 +108,14 @@ public class Login_Form extends javax.swing.JFrame {
         jButton_login.setAlignmentY(0.0F);
         jButton_login.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton_login.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton_login.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton_loginMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton_loginMouseExited(evt);
+            }
+        });
         jButton_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_loginActionPerformed(evt);
@@ -356,11 +364,22 @@ public class Login_Form extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowClosed
 
     private void jButton_createaccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_createaccActionPerformed
-     Register_Form Rg=new Register_Form();
-     Rg.setVisible(true);
-     Rg.pack();
+     accessPass Ap=new accessPass();
+     Ap.setVisible(true);
+     Ap.pack();
      this.dispose();
     }//GEN-LAST:event_jButton_createaccActionPerformed
+
+    private void jButton_loginMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_loginMouseEntered
+       jButton_login.setBackground(Color.white);
+       jButton_login.setForeground(Color.blue);
+    }//GEN-LAST:event_jButton_loginMouseEntered
+
+    private void jButton_loginMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_loginMouseExited
+        jButton_login.setBackground(Color.blue);
+               jButton_login.setForeground(Color.white);
+
+    }//GEN-LAST:event_jButton_loginMouseExited
 
     /**
      * @param args the command line arguments
